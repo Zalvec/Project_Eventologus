@@ -1,0 +1,25 @@
+<main>
+
+    <input type="hidden" id="formname" name="formname" value="login_form">
+
+    <form method="post" action="lib/login.php">
+        <section class="container">
+            <section class="contcontainerform formulier">
+                <section class="form">
+                <h1>Login</h1>
+                <div class="invul">
+                    <label for="use_email">Login</label>
+                    <input name="use_email" id="use_email" placeholder="voorbeeld@voorbeeld.be">
+                </div>
+                <div class="invul">
+                    <label for="use_wachtwoord">Wachtwoord</label>
+                    <input type="password" name="use_wachtwoord" id="use_wachtwoord" placeholder="Wachtwoord...">
+                </div>
+                <input name="loginbutton" type="submit" value="Log in">
+                <p>Nog geen lid? <a href="register.php">Registreer hier...</a></p>
+                </section>
+            </section>
+        </section>
+    </form>
+
+</main>

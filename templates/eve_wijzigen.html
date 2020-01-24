@@ -1,0 +1,74 @@
+<section class="contcontainer beheer">
+    <section class="wijzig">
+        <form method="post" action="lib/wijzigen.php"  id="wijzig_form" enctype="multipart/form-data">
+            <section class="afbeelding afbeeldingform">
+                <label for="eve_image">Afbeelding</label>
+                <img src="images/@@eve_image@@" onclick="triggerClick()" id="display">
+                <input type="file" name="eve_image" onchange="displayImage(this)" id="eve_image">
+                <script src="js/scripts.js"></script>
+            </section>
+            <section class="wijzigform">
+                <input type="hidden" id="formname" name="formname" value="eve_wijzig_form">
+                <input type="hidden" id="tablename_eve" name="tablename_eve" value="evenement">
+                <input type="hidden" id="tablename_loc" name="tablename_loc" value="locatie">
+                <input type="hidden" id="eve_id" name="eve_id" value="@@eve_id@@">
+                <input type="hidden" id="loc_id" name="loc_id" value="@@loc_id@@">
+                <div class="invul">
+                    <label for="eve_naam">Naam</label>
+                    <input type="text" name="eve_naam" id="eve_naam" value="@@eve_naam@@" placeholder="Naam..." required oninvalid="this.setCustomValidity('Gelieve een naam voor het evenement in te geven')" oninput="setCustomValidity('')">
+                </div>
+                <div class="invul">
+                    <fieldset>
+                        <legend>Locatie <strong class="pos_wijzigen">(Selecteer geen postcode indien u deze niet wilt wijzigen.)</strong></legend>
+                        <label for="loc_straat" hidden>Straat</label>
+                        <input id="loc_straat" placeholder="Straat..." name="loc_straat" value="@@loc_straat@@">
+                        <label for="loc_nr" hidden>Nummer</label>
+                        <input id="loc_nr" placeholder="Huisnr..." name="loc_nr" value="@@loc_nr@@">
+
+                        @@content@@
+
+                        <label for="loc_gebouw" hidden>Gebouw</label>
+                        <input id="loc_gebouw" placeholder="Gebouw..." name="loc_gebouw" value="@@loc_gebouw@@">
+                    </fieldset>
+                </div>
+                <div class="invul">
+                    <fieldset>
+                        <legend>Prijs (zonder €-teken)</legend>
+                        <label for="eve_minprijs" hidden>Min. prijs</label>
+                        <input type="text" name="eve_minprijs" id="eve_minprijs" placeholder="Minimum..." value="@@eve_minprijs@@" required oninvalid="this.setCustomValidity('Gelieve de minimumprijs in te stellen of GRATIS aan te vinken. Gebruik hiervoor 0-9 , en .')" oninput="setCustomValidity('')">
+                        <label for="eve_maxprijs" hidden>Max. prijs</label>
+                        <input type="text" name="eve_maxprijs" id="eve_maxprijs" placeholder="Maximum..." value="@@eve_maxprijs@@" required oninvalid="this.setCustomValidity('Gelieve de maximumprijs in te stellen. Gebruik hiervoor 0-9 , en .')" oninput="setCustomValidity('')">
+                    </fieldset>
+                </div>
+                <div class="invul">
+                    <fieldset>
+                        <legend>Datum</legend>
+                        <label for="eve_begindatum" hidden>Begindatum</label>
+                        <input type="date" name="eve_begindatum" id="eve_begindatum" placeholder="Begindatum..." value="@@eve_begindatum@@" required oninvalid="this.setCustomValidity('Gelieve de begindatum in te stellen')" oninput="setCustomValidity('')">
+                        <label for="eve_einddatum" hidden>Einddatum</label>
+                        <input type="date" name="eve_einddatum" id="eve_einddatum" placeholder="Einddatum..." value="@@eve_einddatum@@" required oninvalid="this.setCustomValidity('Gelieve de einddatum in te stellen')" oninput="setCustomValidity('')">
+                    </fieldset>
+                </div>
+                <div class="invul">
+                    <fieldset>
+                        <legend>Tijd</legend>
+                        <label for="eve_opening" hidden>Beginuur</label>
+                        <input type="time" name="eve_opening" id="eve_opening" placeholder="Beginuur..." value="@@eve_opening@@" required oninvalid="this.setCustomValidity('Gelieve het beginuur in te vullen')" oninput="setCustomValidity('')">
+                        <label for="eve_sluiting" hidden>Einduur</label>
+                        <input type="time" name="eve_sluiting" id="eve_sluiting" placeholder="Sluituur..." value="@@eve_sluiting@@" required oninvalid="this.setCustomValidity('Gelieve het einduur in te vullen')" oninput="setCustomValidity('')">
+                    </fieldset>
+                </div>
+                <div class="invul">
+                    <label for="eve_beschrijving">Beschrijving</label>
+                    <textarea name="eve_beschrijving" id="eve_beschrijving" placeholder="@@eve_beschrijving@@">@@eve_beschrijving@@</textarea>
+                </div>
+                <div class="buttons">
+                    <div class="beheerbutton">
+                        <button type="submit" value="Wijzigingen toepassen">Wijzigingen toepassen</button>
+                    </div>
+                    <a class="verwijder" href="lib/verwijder.php?@@eve_id@@">Verwijder evenement</a>
+                </div>
+            </section>
+        </form>
+    </section>
+</section>

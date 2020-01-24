@@ -1,0 +1,810 @@
+/* CSS bij eventologus */
+@import"reset.css";
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,400,700&display=swap');
+@import "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css";
+
+html{
+    min-height: 100%;
+    position: relative;
+}
+
+
+body{
+    font: 100%/1.4 "Raleway", sans-serif;
+    color: #5A6A83;
+    position: static;
+}
+
+a{
+    color: #5A6A83;
+    text-decoration: none;
+    transition: color 500ms ease;
+}
+
+a:hover{
+    color: mediumpurple;
+}
+
+main{padding-bottom: 110px;}
+
+.lees_meer{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    text-align: center;
+    margin-bottom: 1em;
+    border: 1px solid mediumpurple;
+    display: inline;
+    padding: .5em 0;
+    transition: background 1000ms ease;
+    background: #CBDEF4;
+}
+
+.lees_meer:hover{
+    background: #d8acdb;
+    color: white;
+}
+
+.container{
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+/* Zoeken stijlen */
+
+
+.geen_zoek{padding-top: 2em;}
+
+.zoeken{
+    margin-top: 1em;
+    text-align: right;
+    background: rgb(222, 232, 244);
+    padding: 1em;
+}
+
+.zoeken input{
+    border: none;
+    border-bottom: 1px solid #48556e;
+    height: 2rem;
+    outline: none;
+    width: 250px;
+    background:rgb(222, 232, 244) ;
+}
+
+.zoeken_button{
+    background: none;
+    border: none;
+    outline: none;
+}
+
+.zoeken_button:hover{ cursor: pointer; }
+
+.zoeken_button .fas{
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+/* Catnav stijlen------------------------------------------------------------------------------------------------------------------------------------------------------ */
+
+.categorieën_list{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.categorieën_list li{
+    display: block;
+    text-align: center;
+}
+
+.categorieën_list li a{
+    text-decoration: none;
+    padding: 1.5em 0;
+    color: #5A6A83;
+    display: block;
+}
+
+.categorieën_list li a:hover{
+    border-bottom: 1px solid #5A6A83;
+}
+
+@media screen and (min-width: 1000px){
+    html{zoom: 100%;}
+
+    .categorieën_list{display: flex;}
+
+    .categorieën_list li{flex-grow: 1;}
+
+    .categorieën_list li a{padding: 1.5em 0;}
+}
+
+/* Messages stijlen------------------------------------------------------------------------------------------------------------------------------------------------------ */
+
+div.message{
+    background: rgba(255, 44, 0, 0.71);
+    color: #CBDEF4;
+    text-align: center;
+    padding: 1em 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    transition: display 500ms ease;
+}
+
+#right{
+    width: 55%;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 1em;
+}
+
+#message a{
+    color: white;
+}
+
+/* Nav stijlen -------------------------------------------------------------------------------------- */
+
+header{
+    min-height: 100px;
+    background-image: url(../images/shutterstock_538256848.jpg);
+    background-attachment: fixed;
+    background-position: 0 -150px;
+}
+
+#header{
+    min-height: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#header h1{
+    color: #CBDEF4;
+    font-size: 2rem;
+    background: rgba(71, 100, 132, 0.8);
+    padding: .2em;
+}
+
+header a{
+    text-decoration: none;
+    display: block;
+}
+
+nav#mainnav{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+nav#mainnav ul{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+nav ul li a{
+    color: #444;
+    padding: .5em;
+    background: #CBDEF4;
+    border-radius: 2px;
+    margin: .5em;
+    text-decoration: none;
+    text-align: center;
+    transition: all 500ms ease;
+}
+
+nav#mainnav ul li a:hover{
+    background: #5A6A83;
+    color: #cbdef4;
+}
+
+#active{
+    background: #5A6A83;
+    color: #cbdef4;
+}
+
+#active:hover{ cursor: default; }
+
+@media screen and (min-width: 1000px) {
+    #header{
+        flex-direction: row;
+    }
+
+    nav#mainnav{
+        justify-content: flex-end;
+    }
+
+    nav#mainnav ul{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+
+    nav#mainnav ul li a{padding: 1em;}
+
+    #header h2{ margin: 0; }
+}
+
+/* Main stijlen -------------------------------------------------------------------------------------- */
+
+main h2{
+    text-align: center;
+}
+
+.titel{
+    font-size: 1.3rem;
+    margin-top: 1.2em;
+}
+
+.titel h2{ padding: 0; }
+
+.undertitle{
+    display: grid;
+    grid-gap: 2em;
+    grid-template-columns: 1fr;
+    grid-auto-columns: 1px;
+    padding: 1.5em 0;
+}
+
+.contcontainer{
+    margin-top: 1em;
+    width: 100%;
+}
+
+.contdetail{
+    min-height: 71vh;
+    display: flex;
+    align-items: center;
+}
+
+h2{
+    font-size: 1.5rem;
+    padding-bottom: .8em;
+}
+
+.content{
+    background: #CBDEF4;
+    padding: 1em;
+    line-height: 30px;
+    width: 100%;
+}
+
+.content a img{
+    margin: 0 auto;
+    width: 80%;
+    height: 40%;
+}
+
+.maintitle{
+    font-size: 1.8rem;
+    font-weight: 700;
+    padding: .8em 0 .5em 0;
+}
+
+.center h2{
+    font-size: 1.5rem;
+}
+
+.center{
+    text-align: center;
+}
+
+.datum{color: orangered;}
+
+.datum, .tickets{
+    text-align: center;
+    padding: 1em 0;
+}
+
+.tickets{ font-weight: 600; }
+
+.beschrijving{ border-bottom: 1px solid #CBDEF4; }
+
+@media screen and (min-width: 1000px){
+    .undertitle{ grid-template-columns: repeat(3,1fr); }
+    .beschrijving{border-bottom: none;}
+    .content a img{
+        width: 250px;
+        height: 250px;
+    }
+}
+
+@media screen and (min-width: 1030px){
+    .content a img{
+        width: 300px;
+        height: 250px;
+    }
+}
+
+.button button{
+    margin-left: 9em;
+    margin-bottom: 1em;
+    padding: 1em;
+    border: none;
+    background: lightgreen;
+    border-radius: 5px;
+    color: #5A6A83;
+    cursor: pointer;
+    transition: background 500ms ;
+}
+
+.button button:hover{
+    background: palegreen;
+    border: forestgreen 1px solid;
+}
+/* Window stijlen------------------------------------------------------------------------------------------------------------------------------------------------------ */
+
+.window{
+    width: 100%;
+    background: url(../images/shutterstock_538256848.jpg) center/cover no-repeat fixed;
+    color: white;
+    font-weight: 600;
+    text-align: center;
+    text-shadow: 2px 2px #444444;
+    min-height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.windowcover {
+    background: rgba(0,0,0,.3);
+    width: 100%;
+    min-height: 100px;
+    padding-top: .5em;
+}
+
+/* Detail stijlen------------------------------------------------------------------------------------------------------------------------------------------------------ */
+
+.detail img{
+    width: 350px;
+    height: 350px;
+    margin: 0 auto;
+}
+
+.detail h1{
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.detail p{
+    padding: 1em;
+    line-height: 25px;
+    text-align: center;
+    word-wrap: break-word;
+}
+
+
+.date{padding: 0}
+
+.adres {
+    margin: 1em 0;
+}
+.adres h2{
+    margin: 0;
+    padding: 0;
+}
+
+.adres p{
+    padding: .3em 0;
+    font-weight: 600;
+    color: #5A6A83;
+}
+.adres p:first-of-type{padding-top: .5em;}
+
+.detbeschrijving{ padding: 1em; }
+
+.detbeschrijving h2{
+    padding: .3em;
+}
+
+.social{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 2em;
+    text-align: center;
+    max-width: 100%;
+}
+
+.social .fab,
+.fas{
+    margin: 0 .5em;
+    color: #5A6A83;
+    transition: color 500ms ease;
+    text-decoration: none;
+    font-size: 3rem;
+}
+
+.fab:hover, .fas:hover{ color: #444444; }
+
+/* Contact stijlen -------------------------------------------------------------------------------------- */
+
+.contactform h1{
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: .5em;
+    font-weight: 700;
+}
+
+.contcontainerform{
+    margin: auto auto;
+}
+
+.contactform p{
+    text-align: center;
+    margin-bottom: 1em;
+    font-weight: 200;
+    font-size: 1.1rem;
+}
+
+.contactform{
+    width: 100%;
+    margin: 0 auto;
+    padding-top: 1em;
+}
+
+.contcontainerform.content{width: 60%;}
+
+.contactform .invul{
+    margin-top: 1em;
+}
+
+.contactform .invul input,
+.contactform .invul textarea
+{
+    min-width: 100%;
+    max-width: 100%;
+    border: 1px solid #8CA2B5;
+    border-radius: 5px;
+    min-height: 2.5em;
+}
+
+.contactform .button button{
+    margin: 2em 0;
+    width: 100%;
+    height: 40px;
+}
+
+@media screen and (min-width: 700px){
+
+    .contcontainerform{
+        width: 40%;
+        margin: 2em auto;
+    }
+
+    .social{grid-template-columns: repeat(6, 1fr);}
+}
+
+@media screen and (min-width: 1000px){
+    .contcontainerform{ width: 40%;}
+}
+
+/* Login stijlen -------------------------------------------------------------------------------------- */
+
+.form{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.invul input,
+.invul textarea{
+    width: 100%;
+    margin: 1em 0 2em 0;
+    border: 1px solid #8CA2B5;
+    border-radius: 5px;
+    padding: 1em .5em;
+}
+
+.form h1{
+    font-size: 1.5rem;
+    margin: 1em 0;
+    text-align: center;
+    font-weight: 700;
+}
+
+.form p{
+    text-align: center;
+    margin-top: 1em;
+}
+
+.form input[type="submit"]{
+    cursor: pointer;
+    border-radius: 5px;
+    background: white;
+    height: 30px;
+}
+
+@media screen and (min-width: 1000px) {
+    .form{width: 100%;}
+}
+
+/* Beheer stijlen -------------------------------------------------------------------------------------- */
+
+#wijzig_form {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start ;
+}
+
+.afbeeldingform { padding-top: 12em; }
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.beheerbutton button{
+    border: none;
+    background: lightgreen;
+    border-radius: 5px;
+    color: #5A6A83;
+    cursor: pointer;
+    transition: background 500ms ;
+    padding: 1em;
+    font-size: 1rem;
+}
+
+.beheerbutton button:hover{
+    background: palegreen;
+    border: forestgreen 1px solid;
+}
+
+.verwijder{
+    background: orangered;
+    padding: 1em;
+    font-size: 1rem;
+    border-radius: 4px;
+    text-decoration: none;
+    color: #dee8f4;
+    display: inline-block;
+    margin: 1em 0;
+    text-align: center;
+    transition: background 500ms;
+}
+
+.verwijder:hover{
+    border: 1px solid darkred;
+    color: #dee8f4;
+}
+
+.afbeelding {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.afbeelding img {
+    width: 250px;
+    border-radius: 5px;
+    padding-top: 1em;
+    cursor: pointer;
+}
+
+.invul textarea{
+    min-width: 100%;
+    max-width: 100%;
+    height: 200px;
+}
+.invul #display {
+    margin: 1em 0;
+    border-radius: 5px;
+    height: 250px;
+    width: 250px;
+    cursor: pointer;
+}
+
+.loc_pos_id{
+    display:inline-block;
+    width: 100%;
+}
+
+strong{ font-weight: 600; }
+
+.afbeeldingform #display{
+    height: 300px;
+    width: 300px;
+}
+
+.invul input[type=file],
+.afbeelding input[type=file] { display: none;}
+
+#loc_straat{width: 59%;}
+#loc_nr{width: 14%;}
+
+#loc_pos_id,
+#cev_cat_id{
+    height: 44px;
+    margin: 1em 0 2em 0;
+    border-radius: 5px;
+}
+
+#loc_pos_id { width: 25%; }
+#cev_cat_id { width: 30%; }
+
+#eve_minprijs,
+#eve_maxprijs,
+#eve_begindatum,
+#eve_einddatum,
+#eve_opening,
+#eve_sluiting{width: 49%;}
+
+.geen_eve{
+    margin: 1em 0;
+    font-size: 1.2rem;
+}
+
+.socialemedia .linksdiv { display: flex; }
+
+.linksdiv label { margin-top: 11em; }
+
+.socialemedia legend { margin-bottom: 1em;}
+
+.socialemedia input:last-of-type { margin-bottom: 2em; }
+
+.socialemedia div {
+    width: 100%;
+    margin-right: 1em;
+}
+
+.checkbox{
+    display: flex;
+    align-items: center;
+    margin: 1em 0;
+}
+
+.checkbox input {
+    width: 20px;
+    padding: 0;
+    margin: 0;
+}
+
+.check { margin: .5em 0; }
+
+.check #GDPR {
+    margin-top: 2em;
+    width: 20px;
+}
+
+.check #algemene_voorwaarden {
+    margin-bottom: 2em;
+    width: 20px;
+}
+
+.pos_wijzigen{ font-size: .9rem; }
+
+.verwijder_gep{
+    display: block;
+    text-align: center;
+    padding: 2em;
+    background: orangered;
+    border-radius: 5px;
+    transition: background 500ms ease;
+    color: white;
+    margin-top: 1em;
+}
+
+.verwijder_gep:hover{
+    background: darkred;
+    color: white;
+}
+
+.evenement_aanmaken {
+    padding: .4em;
+    background: #5A6A83;
+    color: #CBDEF4;
+    border-radius: 5px;
+    transition: all 500ms ease;
+    text-align: center;
+    display: block;
+    margin: 1em 5em 0 5em;
+}
+
+
+.evenement_aanmaken:hover {
+    color: #5A6A83;
+    background: #cbdef4;
+}
+
+
+@media screen and (min-width: 1000px) {
+    .evenement_aanmaken {
+        padding: 1em;
+        background: #5A6A83;
+        color: #CBDEF4;
+        border-radius: 5px;
+        transition: all 500ms ease;
+        position: absolute;
+        top: 100px;
+        right: 75px;
+    }
+
+    .invul #display{
+        height: 400px;
+        width: 400px;
+    }
+
+    .rest{ padding-left: 1em; }
+
+
+    .beheer{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        background: #CBDEF4;
+        padding: 1em;
+    }
+
+    .afbeelding img {
+        width: 300px;
+        padding-left: .5em;
+    }
+
+    .wijzig{
+        width: 100%;
+        margin: 1em auto;
+    }
+
+    .wijzigform{ padding: 0 3em; }
+
+    .aanmaakform{
+        width: 60%;
+        margin: 0 auto;
+    }
+
+    .detail{
+        display: flex;
+        flex-direction: row;
+        background: #CBDEF4;
+        padding: 1em;
+        margin-top: 1em;
+    }
+
+    .detail .foto{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .detail img{
+        width: 350px;
+        height: 350px;
+    }
+
+    .social{ padding-top: 2em; }
+}
+
+/* Scroll To Top stijlen ------------------------------------------------------------------------------- */
+
+#goToTop{
+    cursor: pointer;
+    display: none;
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    z-index: 900;
+    font-size: 2rem;
+    padding: .2em .5em ;
+}
+
+/* Voorwaarden stijlen -------------------------------------------------------------------------------------- */
+
+main h2.voorwaarden { margin-top: 2em;}
+
+/* Footer stijlen -------------------------------------------------------------------------------------- */
+
+footer{
+    background: url(../images/shutterstock_538256848.jpg) center/cover no-repeat;
+    background-attachment: fixed;
+    padding: 1em;
+    min-height: 100px;
+    margin-top: 1em;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    color: white;
+    text-shadow:.5px .5px darkgrey ;
+}
